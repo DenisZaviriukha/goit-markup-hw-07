@@ -1,0 +1,63 @@
+.dignity-section {
+    padding-bottom: 0;
+}
+
+.dignity-list {
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap;    
+    margin-left: 30px; */
+}
+
+
+.dignity-item {
+    width: 270px;
+    &::before {
+        display: block;
+        content: "";
+        height: 120px;
+        margin-bottom: 30px;
+        background: var(--fake-white);
+        background-size: contain 70px 70px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 4px;
+    }
+    &+& {
+        margin-left: 30px;
+    }
+}
+
+.icon-antenna::before {
+        background-image: url(../images/antenna.svg);
+}
+
+.icon-clock::before {
+    background-image: url(../images/clock.svg);
+}
+
+.icon-diagram::before {
+       background-image: url(../images/diagram.svg);
+}
+
+.icon-astronaut::before {
+        background-image: url(../images/astronaut.svg);
+    }
+
+
+.dignity-header {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--heading-black-color);
+    margin-bottom: 10px;
+}
+
+.dignity-paragraph {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+}

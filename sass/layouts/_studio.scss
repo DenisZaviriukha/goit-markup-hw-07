@@ -1,0 +1,35 @@
+.studio-header {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--heading-black-color);
+    margin-bottom: 50px;
+}
+
+.studio-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.studio-item {
+    position: relative;
+    text-align: center;
+}
+
+.studio-text {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 27px;
+    padding-top: 27px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    background: var(--studio-text-background);
+    color: var(--white-color);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+

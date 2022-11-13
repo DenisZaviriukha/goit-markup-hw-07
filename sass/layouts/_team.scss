@@ -1,0 +1,54 @@
+.crew {
+    background-color: var(--fake-white);
+    & img {
+        margin-bottom: 30px;
+    }
+}
+
+.container__heading{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--heading-black-color);
+    margin-bottom: 50px;
+}
+
+.crew__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.crew__space {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.crew__item {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.crew__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: var(--heading-black-color);
+    margin-bottom: 10px;
+}
+
+.crew__professioin {
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+}
+
+.crew__icon-list{
+    margin-bottom: 30px;
+}
+
+
+
