@@ -1,29 +1,65 @@
 .hero-section {
     background-color: var(--hero-background);
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url(../images/box17.jpg);
-    height: 600px;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
+                rgba(47, 48, 58, 0.4)),
+            url(../images/hero-image-phone.jpg);
+    // height: auto;   
+    // width: 100%;
+    // max-width: 100%;
+    // margin-left: auto;
+    // margin-right: auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero-image-phone-2x.jpg);
+        }
+    @include tablet {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/hero-image-tablet.jpg);
+        padding-top: 118px;
+        padding-bottom: 118px;
+        @include retina {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url(../images/hero-image-tablet-2x.jpg);
+            }
+    }
+    @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;  
+        @include retina{
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/box17-2x.jpg);
+        }
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/box17.jpg);
+    }
 }
 
 .hero-text {
-
     color: var(--white-color);
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-weight: 900;  
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
 }
 
 .hero-button {
@@ -41,5 +77,6 @@
     &:focus {
         background: var(--hero-button-accent);
     }
+
 }
 

@@ -1,3 +1,12 @@
+.section-studio-hidden{
+    display: none;
+    @media screen and (min-width: 1200px) {
+        display: block;
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
 .studio-header {
     font-weight: 700;
     font-size: 36px;

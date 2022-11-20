@@ -1,20 +1,41 @@
  .clients-haeding {
-    @include font(700, 36px, 1.16, 0.03em);
+    @include font(700, 28px, 1.17, 0.03em);
     text-align: center;
     color: var(--heading-black-color);
     margin-bottom: 50px;
+    @media screen and (min-width: 1200px) {
+        @include font(700, 36px, 1.16, 0.03em);
+    }
 }
+
 
 .clients-list {
     margin-left: auto;
     margin-right: auto;
+    // display: flex;
+    // justify-content: space-between;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .client-item {
-    width: 170px;
+    // width: 170px;
+    // height: 92px;
+    
     height: 92px;
+    display: flex;
+    width: calc((100% - 30px)/2);
+    
+            
+            @media screen and (min-width: 768px) {
+                width: calc((100% - 60px)/3);
+            }
+        
+            @media screen and (min-width: 1200px) {
+                width: calc((100% - 150px)/6);
+            }
+
 }
 
 .client-link {
@@ -27,6 +48,7 @@
     height: 100%;
     align-items: center;
     justify-content: center;
+    
     /* padding-top: 16px;
     padding-bottom: 16px;
     padding-right: 32px;

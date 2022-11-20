@@ -40,16 +40,75 @@
                         </a>
                     </li>
                 </ul>
+                <div class="mobile__wrapper">
+                    <button type=button class="mobile__button" data-menu-open>
+                        <svg class="mobile__menu-svg" width="44" height="44">
+                            <use href="./images/icons.svg#iconmobilemenu"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="phone-container is-hidden" data-menu>
+                <div class="mobile-menu">
+                    <button type=button class="mobile__close-button" data-menu-close>
+                        <svg class="mobile__close-menu-svg" width="40" height="40">
+                            <use href="./images/icons.svg#iconmobilemenuclose"></use>
+                        </svg>
+                    </button>
+                    <div class="mobile-nav-space">
+                        <ul class="navigation__close-list list">
+                            <li class="navigation__close-item"><a class="navigation__close-link close-current link" href="./index.html">Студія</a></li>
+                            <li class="navigation__close-item"><a class="navigation__close-link link" href="./portfolio.html">Портфоліо</a></li>
+                            <li class="navigation__close-item"><a class="navigation__close-link link" href="#">Контакти</a></li>
+                        </ul>    
+                    </div>
+                    <div class="mobile-cont-space">
+                        <ul class="contacts contacts__close-list list">
+                        <li class="contacts__close-item">
+                            <a class="contacts__close-tel link" href="tel:+38096111111">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="contacts__close-item-btm ">
+                            <a class="contacts__close-mail link" href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class=" soc__close-list list">
+                        <li class="soc__close-item">
+                            <a class="cosial-close-link link" href="tel:+38096111111">
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="soc__close-item">
+                            <a class="cosial-close-link link" href="tel:+38096111111">
+                                Twitter
+                            </a>
+                        </li>
+                        <li class="soc__close-item">
+                            <a class="cosial-close-link link" href="tel:+38096111111">
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="soc__close-item">
+                            <a class="cosial-close-link link" href="tel:+38096111111">
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul></div>
+                    
+                </div>
             </div>
         </header>
         <main> 
             <!--Hero-->
-            <section class="hero-section">
-                <div class="container">
-                    <h1 class="hero-text">Ефективні рішення для<br>вашого бізнесу</h1>
-                    <button class="hero-button btn" type="button" data-modal-open>Замовити послугу</button>
-                </div>
-            </section>
+                <section class="hero-section">
+                    <div class="container">
+                        <h1 class="hero-text">Ефективні рішення для<br>вашого бізнесу</h1>
+                        <button class="hero-button btn" type="button" data-modal-open>Замовити послугу</button>
+                    </div>
+                </section>
             <!--Dignity-->
                 <section class=" section dignity-section">
                     <div class="container">
@@ -74,21 +133,22 @@
                     </div>
                 </section>
             <!--Studio-->
-            <div class="section">
+            <div class="section-studio-hidden">
                 <section class="studio-section">
                     <div class="container">
                         <h2 class="studio-header">Чим ми займаємося</h2>
                         <ul class="studio-list list">
                             <li class="studio-item">
-                                <img src="./images/box1.jpg" alt="Кодинг" width="370">
+                                
+                                <img src="./images/box1.jpg" srcset="./images/box1.jpg 1x, ./images/box1-2x.jpg 2x" alt="Кодинг" width="370">
                                 <p class="studio-text">десктопні додатки</p>
                             </li>
                             <li class="studio-item">
-                                <img src="./images/box2.jpg" alt="Маркетинг" width="370">
+                                <img src="./images/box2.jpg" srcset="./images/box2.jpg 1x, ./images/box2-2x.jpg 2x" alt="Маркетинг" width="370">
                                 <p class="studio-text">мобільні додатки</p>
                             </li>
                             <li class="studio-item">
-                                <img src="./images/box3.jpg" alt="Дизайн" width="370">
+                                <img src="./images/box3.jpg"  srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x" alt="Дизайн" width="370">
                                 <p class="studio-text">дизайнерські рішення</p>
                             </li>        
                         </ul>
@@ -103,7 +163,13 @@
                     </h2>
                     <ul class="crew__list list">
                         <li class="crew__item">
-                            <img src="./images/box4.jpg" alt="Чоловік з каштановим волоссям, з бородоюй , носить круглі окуляри, вдітий у червоне поло" width="270">
+                            <picture>
+                                <source srcset="./images/box4.jpg 1x, ./images/box4-2x.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/box4-tab.jpg 1x, ./images/box4-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/box4-pho.jpg 1x, ./images/box4-pho-2x.jpg 2x" media="(min-width: 320px)">
+                                <img src="./images/box4.jpg"
+                                    alt="Чоловік з каштановим волоссям, з бородоюй , носить круглі окуляри, вдітий у червоне поло" width="450">
+                            </picture>
                             <div class="crew__space">
                                 <h3 class="crew__name">Ігор Дем'яненко</h3>
                                 <p class="crew__professioin">Product Designer</p>
@@ -140,7 +206,12 @@
                             </ul>
                         </li>
                         <li class="crew__item">
-                            <img src="./images/box5.jpg" alt="Жінка зі світлим волоссям, носить окуляри, вдіта у чорний піджак" width="270">
+                            <picture>
+                                <source srcset="./images/box5.jpg 1x, ./images/box5-2x.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/box5-tab.jpg 1x, ./images/box5-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/box5-pho.jpg 1x, ./images/box5-pho-2x.jpg 2x" media="(min-width: 320px)">
+                                <img src="./images/box5.jpg" alt="Жінка зі світлим волоссям, носить окуляри, вдіта у чорний піджак" width="450">
+                            </picture>
                             <div class="crew__space">
                                 <h3 class="crew__name">Ольга Рєпіна</h3>
                                 <p class="crew__professioin">Frontend Developer</p>
@@ -176,8 +247,14 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="crew__item">  
-                            <img src="./images/box6.jpg" alt="Чоловік з каштановим волоссям, зі щетиною, вдітий у білу сорочку" width="270">
+                        <li class="crew__item">
+                            <picture>
+                                <source srcset="./images/box6.jpg 1x, ./images/box6-2x.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/box6-tab.jpg 1x, ./images/box6-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/box6-pho.jpg 1x, ./images/box6-pho-2x.jpg 2x" media="(min-width: 320px)">
+                                <img src="./images/box6.jpg" alt="Чоловік з каштановим волоссям, зі щетиною, вдітий у білу сорочку" width="450">        
+                            </picture>
+                            
                             <div class="crew__space">  
                                 <h3 class="crew__name">Микола Тарасов</h3>
                                 <p class="crew__professioin">Marketing</p>
@@ -214,7 +291,13 @@
                             </ul>
                         </li>
                         <li class="crew__item">
-                            <img src="./images/box7.jpg" alt="Чоловік брюнет, з бородою, носить круглі окуляри, вдітий у чорну футболку" width="270">
+                            <picture>
+                                <source srcset="./images/box7.jpg 1x, ./images/box7-2x.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/box7-tab.jpg 1x, ./images/box7-tab-2x.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/box7-pho.jpg 1x, ./images/box7-pho-2x.jpg 2x" media="(min-width: 320px)">
+                                <img src="./images/box7.jpg" alt="Чоловік брюнет, з бородою, носить круглі окуляри, вдітий у чорну футболку" width="450">
+                            </picture>
+                            
                             <div class="crew__space">
                                 <h3 class="crew__name">Михайло Єрмаков</h3>
                                 <p class="crew__professioin">UI Designer</p>
@@ -307,49 +390,51 @@
         <!--Footer-->
         <footer class="footer">
             <div class="container">
-                <div class="footer__space">
-                    <a class="logo footer__logo-web link" href="/">Web<span class="logo logo--color-light">Studio</span>
-                    </a>
-                    <address class="address">
-                        <ul class="adderss__list list">
-                            <li class="address__street"><a href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.426582,30.5361431,16.98z/data=!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858" class="address__link link">м. Київ, пр-т Лесі Українки, 26</a></li>
-                            <li class="address__contacts-item"><a class="address__contacts-link link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                            <li class="address__contacts-item"><a class="address__contacts-link link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                <div class="footer__studio-invite-connect">
+                    <div class="footer__space">
+                        <a class="logo footer__logo-web link" href="/">Web<span class="logo logo--color-light">Studio</span>
+                        </a>
+                        <address class="address">
+                            <ul class="adderss__list list">
+                                <li class="address__street"><a href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.426582,30.5361431,16.98z/data=!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858" class="address__link link">м. Київ, пр-т Лесі Українки, 26</a></li>
+                                <li class="address__contacts-item"><a class="address__contacts-link link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                                <li class="address__contacts-item"><a class="address__contacts-link link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                            </ul>
+                        </address>
+                    </div>
+                    <div class="invite__connection">
+                        <h2 class="slogan__paragraph">приєднуйтеся</h2>
+                        <ul class="icon-list invite__icon-list list">
+                            <li class="icon-item">
+                                <a href="" class="icon--link-dark link icon">
+                                    <svg class="invite__icon-svg" width="20" height="20">
+                                        <use href="./images/icons.svg#iconinstagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="icon-item">
+                                <a href="" class="icon--link-dark link icon">
+                                    <svg class="invite__icon-svg" width="20" height="20">
+                                        <use href="./images/icons.svg#icontwitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="icon-item">
+                                <a href="" class="icon--link-dark link icon">
+                                    <svg class="invite__icon-svg" width="20" height="20">
+                                        <use href="./images/icons.svg#iconfacebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="icon-item">
+                                <a href="" class="icon--link-dark link icon">
+                                    <svg class="invite__icon-svg" width="20" height="20">
+                                        <use href="./images/icons.svg#iconlinkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
-                    </address>
-                </div>
-                <div class="invite__connection">
-                    <h2 class="slogan__paragraph">приєднуйтеся</h2>
-                    <ul class="icon-list invite__icon-list list">
-                        <li class="icon-item">
-                            <a href="" class="icon--link-dark link icon">
-                                <svg class="invite__icon-svg" width="20" height="20">
-                                    <use href="./images/icons.svg#iconinstagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="icon-item">
-                            <a href="" class="icon--link-dark link icon">
-                                <svg class="invite__icon-svg" width="20" height="20">
-                                    <use href="./images/icons.svg#icontwitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="icon-item">
-                            <a href="" class="icon--link-dark link icon">
-                                <svg class="invite__icon-svg" width="20" height="20">
-                                    <use href="./images/icons.svg#iconfacebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="icon-item">
-                            <a href="" class="icon--link-dark link icon">
-                                <svg class="invite__icon-svg" width="20" height="20">
-                                    <use href="./images/icons.svg#iconlinkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                    </div>
                 </div>
                 <div class="invite__connection sub__connection">
                     <h2 class="slogan__paragraph sub__paragraph">підпишіться на розсилку</h2>
@@ -366,7 +451,7 @@
                 </div>
             </div>
         </footer>
-        <div class="backdrop is-hidden" data-modal > <!--  - НЕ ЗАБУДЬ ПОТОМ ОБРАТНО ПОМТАВИТЬ В КЛАССЫ -->
+          <div class="backdrop is-hidden" data-modal > <!-- -->
             <div class="modal">
                 <button type="buttton" class="modal-close-button" data-modal-close>
                     <svg class="modal-svg"  width="18" height="18">
@@ -428,5 +513,6 @@
             </div>
         </div>
         <script src="./js/modal.js"></script>
+        <script src="./js/mobile-menu.js"></script>
     </body>
 </html>

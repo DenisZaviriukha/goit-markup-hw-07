@@ -4,8 +4,12 @@
     &__container {
         display: flex;
         align-items: center;
+        height: 60px;
+        @media screen and (min-width: 768px) {
+            height:auto;
     }
 } 
+}
 
 .header__logo-web{
     margin-right: 93px;
@@ -18,6 +22,16 @@
     letter-spacing: 0.02em;
     display: flex;
 }
+
+
+.navigation{
+    display:none;
+    @media screen and (min-width: 768px) {
+        display:flex;
+    }
+}
+
+
 
 .navigation__item {
     margin-right: 50px;
@@ -55,10 +69,21 @@
 }
 
 
+
 .contacts__list {
-    display: flex;
-    margin-left: auto;
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: block;
+        margin-left: auto;
+    }
+    // display: flex;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: flex-end;
+    }
 }
+
+
 
 .contacts__item {
     font-weight: 500;
@@ -68,7 +93,12 @@
     display: flex;
     align-content: center;
     &+& {
-        margin-left: 50px;
+        @media screen and (min-width: 768px) {
+        margin-top: 10px;
+        }
+        @media screen and (min-width: 1200px){
+        margin-left: 50px;    
+        }
     }
 }
 
@@ -88,4 +118,171 @@
 .contacts__icon-svg {
     display: inline-block;
     margin-right: 10px;
+}
+
+.mobile__wrapper {
+    display: flex;
+    margin-left: auto;
+    @media screen and (min-width: 768px) {
+            display: none;
+        }
+
+}
+
+.mobile__button{
+    background-color: transparent;
+    border: transparent;
+}
+
+.mobile__menu-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill:var(--black-color);
+    &:hover,
+    &:focus
+    {
+        fill: var(--accent-color);
+    }
+}
+
+
+.mobile-nav-space {}
+
+.mobile-cont-space {}
+
+.phone-container{
+    position: fixed;    
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+    background-color: var(--white-color);
+    padding-left:40px;
+    padding-right:40px;
+    @media screen and (min-width: 768px) {
+            display: none;
+        }
+    > .mobile-menu{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: auto;
+    }
+}
+
+.mobile-menu {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    @media screen and (min-width: 480px) {
+            width: 480px;
+        }
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    
+}
+
+.mobile__close-button {
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 3px;
+    background-color: transparent;
+    border: transparent;
+
+}
+
+.mobile__close-menu-svg {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        fill: var(--black-color);
+    
+        &:hover,
+        &:focus {
+            fill: var(--accent-color);
+        }
+
+}
+
+.navigation__close-list {
+    
+}
+
+.navigation__close-item {
+    
+    &+&{
+        margin-top: 35px;   
+    }
+        
+}
+
+.navigation__close-link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--modal-head-text-color);
+}
+
+.contacts__close-list {
+    margin-top: 64px;
+}
+
+.contacts__close-item-btm {
+    margin-top: 32px;   
+}
+
+.contacts__close-tel {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color:var(--accent-color);
+
+}
+
+.contacts__close-mail {
+ 
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: var(--paragraph-gray-color);
+}
+
+.soc__close-list{
+    margin-top:64px;;
+    display: flex;
+    
+}
+
+.soc__close-item{
+    position: relative;
+    &:not(:first-child){
+        padding-left: 10px;    
+    }
+    
+    &::after {
+            content: "";
+            position: relative;
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            transform: rotate(90deg);
+            margin-left: 10px;
+    }
+    &:last-child::after{
+        display:none;
+    }
+}
+
+.cosial-close-link{ 
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
 }
