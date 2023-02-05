@@ -2,11 +2,21 @@
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
-
+    @media screen and (max-width: 768px) {
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;  
+        justify-content: flex-start;  
+    }
+        
 }
 
 .filter-item {
     margin-right: 8px;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 15px;
+    }
 }
 
 .filter-button {

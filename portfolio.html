@@ -12,19 +12,18 @@
         <link rel="stylesheet" href="./css/main.min.css">
     </head>
     <body>
-        <header class="header">
+         <header class="header">
             <div class="container header__container">
                 <a class="logo header__logo-web link" href="/">Web<span class="logo logo--color-dark">Studio</span></a>
                 <nav class="navigation">
                     <ul class="navigation__list list">
-                        <li class="navigation__item"><a class="navigation__link link" href="./index.html">Студія</a>
-                        </li>
+                        <li class="navigation__item"><a class="navigation__link link" href="./index.html">Студія</a></li>
                         <li class="navigation__item"><a class="navigation__link current link" href="./portfolio.html">Портфоліо</a></li>
-                        <li class="navigation__item"><a class="navigation__link link" href="#">Контакти</a></li>
-                    </ul>
+                        <!-- <li class="navigation__item"><a class="navigation__link link" href="#">Контакти</a></li> -->
+                    </ul>  
                 </nav>
                 <ul class="contacts contacts__list list">
-                    <li class="contacts__item">
+                    <li class="contacts__item"> 
                         <a class="contacts__link link" href="mailto:info@devstudio.com">
                             <svg class="contacts__icon-svg" width="16" height="12">
                                 <use href="./images/icons.svg#iconenvelope"></use>
@@ -40,7 +39,66 @@
                             +38 096 111 11 11
                         </a>
                     </li>
-               </ul>
+                </ul>
+                <div class="mobile__wrapper">
+                    <button type=button class="mobile__button" data-menu-open>
+                        <svg class="mobile__menu-svg" width="44" height="44">
+                            <use href="./images/icons.svg#iconmobilemenu"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="phone-container is-hidden" data-menu>
+                <div class="mobile-menu">
+                    <button type=button class="mobile__close-button" data-menu-close>
+                        <svg class="mobile__close-menu-svg" width="40" height="40">
+                            <use href="./images/icons.svg#iconmobilemenuclose"></use>
+                        </svg>
+                    </button>
+                    <div class="mobile-nav-space">
+                        <ul class="navigation__close-list list">
+                            <li class="navigation__close-item"><a class="navigation__close-link close-current link" href="./index.html">Студія</a></li>
+                            <li class="navigation__close-item"><a class="navigation__close-link link" href="./portfolio.html">Портфоліо</a></li>
+                            <li class="navigation__close-item"><a class="navigation__close-link link" href="#">Контакти</a></li>
+                        </ul>    
+                    </div>
+                    <div class="mobile-cont-space">
+                        <ul class="contacts contacts__close-list list">
+                        <li class="contacts__close-item">
+                            <a class="contacts__close-tel link" href="tel:+38096111111">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="contacts__close-item-btm ">
+                            <a class="contacts__close-mail link" href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class=" soc__close-list list">
+                        <li class="soc__close-item">
+                            <a class="cosial-close-link link" href="tel:+38096111111">
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="soc__close-item">
+                            <a class="cosial-close-link link" href="tel:+38096111111">
+                                Twitter
+                            </a>
+                        </li>
+                        <li class="soc__close-item">
+                            <a class="cosial-close-link link" href="tel:+38096111111">
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="soc__close-item">
+                            <a class="cosial-close-link link" href="tel:+38096111111">
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul></div>
+                    
+                </div>
             </div>
         </header>
         <main>
@@ -71,11 +129,16 @@
                             <li class="project-item">
                                 <a class="link" href="#">
                                     <div class="project-mitten">
-                                        <img src="./images/box8.jpg" width="370" alt="Ноутбук з відкритим сайтом">
+                                        <picture>
+                                            <source scrset="./images/Technoduck1.jpg 1x, ./images/Technoduck2.jpg 2x" media="(min-width: 1200px)">
+                                            <source srcset="./images/Technoduck1tab.jpg 1x, ./images/Technoduck2tab.jpg 2x" media="(min-width: 768px)">
+                                            <source srcset="./images/Technoduck1phone.jpg 1x, ./images/Technoduck2phone.jpg 2x" media="(min-width: 320px)">
+                                        <img src="./images/box8.jpg" width="370" alt="Ноутбук з відкритим сайтом">    
+                                        </picture>
                                         <p class="project-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                         вичерпні відомості про компанію чи приватну особу.
                                         </p>
-                                    </div>
+                                    </div>  
                                     <div class="projects-space">
                                         <h3 class="project-name">Технокряк</h3>
                                         <p class="project-type">Веб-сайт</p>
@@ -84,7 +147,13 @@
                             </li>
                             <li class="project-item"> 
                                 <a class="link" href="#">
-                                    <img src="./images/box9.jpg" width="370" alt="Хлопці грають у баскетбол">
+                                    <picture>
+                                        <source scrset="./images/Basketball1.jpg 1x, ./images/Basketball2.jpg 2x" media="(min-width: 1200px)">
+                                        <source srcset="./images/Basketball1tab.jpg 1x, ./images/Basketball2tab.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/Basketball1mob.jpg 1x, ./images/Basketball2mob.jpg 2x" media="(min-width: 320px)">
+                                        <img src="./images/box9.jpg" width="370" alt="Хлопці грають у баскетбол">
+                                    </picture>
+                                    
                                     <div class="projects-space">
                                         <h3 class="project-name">Постер New Orlean vs Golden Star</h3>
                                         <p class="project-type">Дизайн</p>
@@ -94,7 +163,12 @@
                             </li>
                             <li class="project-item">
                                 <a class="link" href="#">
-                                    <img src="./images/box10.jpg" width="370" alt="Логотип ресторану">
+                                    <picture>
+                                        <source scrset="./images/Seafood1.jpg 1x, ./images/Seafood2.jpg 2x" media="(min-width: 1200px)">
+                                        <source srcset="./images/Seafood1tab.jpg 1x, ./images/Seafood2tab.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/Seafood1pho.jpg 1x, ./images/Seafood2pho.jpg 2x" media="(min-width: 320px)">
+                                        <img src="./images/box10.jpg" width="370" alt="Логотип ресторану">
+                                    </picture>
                                     <div class="projects-space">
                                         <h3 class="project-name">Ресторан Seafood</h3>
                                         <p class="project-type">Додаток</p>
@@ -104,7 +178,12 @@
                             </li>
                             <li class="project-item">
                                 <a class="link" href="#">
-                                    <img src="./images/box11.jpg" width="370" alt="Навушники">
+                                    <picture>
+                                        <source scrset="./images/Prime1.jpg 1x, ./images/Prime2.jpg 2x" media="(min-width: 1200px)">
+                                        <source srcset="./images/Prime1tab.jpg 1x, ./images/Prime2tab.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/Prime1pho.jpg 1x, ./images/Prime2pho.jpg 2x" media="(min-width: 320px)">
+                                        <img src="./images/box11.jpg" width="370" alt="Навушники">
+                                    </picture>
                                     <div class="projects-space">
                                         <h3 class="project-name">Проєкт Prime</h3>
                                         <p class="project-type">Маркетинг</p>
@@ -113,7 +192,12 @@
                             </li>
                             <li class="project-item">
                                 <a class="link" href="#">
-                                    <img src="./images/box12.jpg" width="370" alt="Дві коробки">
+                                    <picture>
+                                        <source scrset="./images/Boxes1.jpg 1x, ./images/Boxes2.jpg 2x" media="(min-width: 1200px)">
+                                        <source srcset="./images/Boxes1tab.jpg 1x, ./images/Boxes2tab.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/Boxes1pho.jpg 1x, ./images/Boxes2pho.jpg 2x" media="(min-width: 320px)">
+                                        <img src="./images/box12.jpg" width="370" alt="Дві коробки">
+                                    </picture>
                                     <div class="projects-space">
                                         <h3 class="project-name">Проєкт Boxes</h3>
                                         <p class="project-type">Додаток</p>
@@ -122,17 +206,27 @@
                             </li>
                             <li class="project-item">
                                 <a class="link" href="#">
-                                    <img src="./images/box13.jpg" width="370" alt="Мак з відкритим сайтом">
+                                    <picture>
+                                        <source scrset="./images/Inspiration1.jpg 1x, ./images/Inspiration2.jpg 2x" media="(min-width: 1200px)">
+                                        <source srcset="./images/Inspiration1tab.jpg 1x, ./images/Inspiration2tab.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/Inspiration1pho.jpg 1x, ./images/Inspiration2pho.jpg 2x" media="(min-width: 320px)">
+                                        <img src="./images/box13.jpg" width="370" alt="Мак з відкритим сайтом">
+                                    </picture>
                                     <div class="projects-space">
                                         <h3 class="project-name">Inspiration has no Borders</h3>
                                         <p class="project-type">Веб-сайт</p>
                                     </div>
-                                </a>
-                                
+                                </a>  
                             </li>
                             <li class="project-item">
                                 <a class="link" href="#">
-                                    <img src="./images/box14.jpg" width="370" alt="Журнал із дизайном">
+                                    <picture>
+                                        <source scrset="./images/Limited1.jpg 1x, ./images/Limited2.jpg 2x" media="(min-width: 1200px)">
+                                        <source srcset="./images/Limited1tab.jpg 1x, ./images/Limited2tab.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/Limited1pho.jpg 1x, ./images/Limited2pho.jpg 2x" media="(min-width: 320px)">
+                                        <img src="./images/box14.jpg" width="370" alt="Журнал із дизайном">
+                                    </picture>
+                                    
                                     <div class="projects-space">
                                         <h3 class="project-name">Видання Limited Edition</h3>
                                         <p class="project-type">Дизайн</p>
@@ -142,7 +236,13 @@
                             </li>
                             <li class="project-item">
                                 <a class="link" href="#">
-                                    <img src="./images/box15.jpg" width="370" alt="Бирка">
+                                    <picture>
+                                        <source scrset="./images/LAB1.jpg 1x, ./images/LAB2.jpg 2x" media="(min-width: 1200px)">
+                                        <source srcset="./images/LAB1tab.jpg 1x, ./images/LAB2tab.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/LAB1pho.jpg 1x, ./images/LAB2pho.jpg 2x" media="(min-width: 320px)">
+                                        <img src="./images/box15.jpg" width="370" alt="Бирка">
+
+                                    </picture>
                                     <div class="projects-space">
                                         <h3 class="project-name">Проєкт LAB</h3>
                                         <p class="project-type">Маркетинг</p>
@@ -152,7 +252,13 @@
                             </li>
                             <li class="project-item">
                                 <a class="link" href="#">
-                                    <img src="./images/box16.jpg" width="370" alt="Ноутбук з додатком">
+                                    <picture>
+                                        <source scrset="./images/Growing1.jpg 1x, ./images/Growing2.jpg 2x" media="(min-width: 1200px)">
+                                        <source srcset="./images/Growing1tab.jpg 1x, ./images/Growing2tab.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/Growing1pho.jpg 1x, ./images/Growing2pho.jpg 2x" media="(min-width: 320px)">
+                                        <img src="./images/box16.jpg" width="370" alt="Ноутбук з додатком">
+                                    </picture>
+                                    
                                     <div class="projects-space">
                                         <h3 class="project-name">Growing Business</h3>
                                         <p class="project-type">Додаток</p>
@@ -165,8 +271,9 @@
             </div>  
         </main>
 <!--Footer-->
-        <footer class="footer">
-            <div class="container">
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__studio-invite-connect">
                 <div class="footer__space">
                     <a class="logo footer__logo-web link" href="/">Web<span class="logo logo--color-light">Studio</span>
                     </a>
@@ -215,23 +322,89 @@
                         </li>
                     </ul>
                 </div>
-                <div class="invite__connection sub__connection">
-                    <h2 class="slogan__paragraph sub__paragraph">підпишіться на розсилку</h2>
-                    <form class="sub__external-form">
-                        <label for="sub__email">
-                            <input type="email" class="sub__user-input" placeholder="Email" id="external-user-email"
-                                name="external-user-email" required>
-                        </label>
-                        <button type="submit" class="sub__send-button btn">Підписатися
-                            <svg class="sub__icon-svg-send" width="24" height="24">
-                                <use href="./images/icons.svg#iconiconsend"></use>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
             </div>
-        </footer>
+            <div class="invite__connection sub__connection">
+                <h2 class="slogan__paragraph sub__paragraph">підпишіться на розсилку</h2>
+                <form class="sub__external-form">
+                    <label for="sub__email">
+                        <input type="email" class="sub__user-input" placeholder="Email" id="external-user-email"
+                            name="external-user-email" required>
+                    </label>
+                    <button type="submit" class="sub__send-button btn">Підписатися
+                        <svg class="sub__icon-svg-send" width="24" height="24">
+                            <use href="./images/icons.svg#iconiconsend"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </footer>
+        <div class="backdrop is-hidden" data-modal> <!-- -->
+            <div class="modal">
+                <button type="buttton" class="modal-close-button" data-modal-close>
+                    <svg class="modal-svg" width="18" height="18">
+                        <use href="./images/icons.svg#iconcloseblack"></use>
+                    </svg>
+                </button>
+                <p class="modal-head-text">Залиште свої дані, ми вам передзвонимо</p>
+                <form>
+                    <div class="modal-field">
+                        <label for="user-name">
+                            <p class="modal-description">І'мя</p>
+                            <div class="input-wrap">
+                                <input type="text" class="modal-input" id="user-name" name="user-name" required>
+                                <svg class="modal-svg-input" width="18" height="18">
+                                    <use href="./images/icons.svg#iconmodalperson"></use>
+                                </svg>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="modal-field">
+                        <label for="user-tel">
+                            <p class="modal-description">Телефон</p>
+                            <div class="input-wrap">
+                                <input type="tel" class="modal-input" id="user-tel" name="user-tel" required>
+                                <svg class="modal-svg-input" width="18" height="18">
+                                    <use href="./images/icons.svg#iconmodaltel"></use>
+                                </svg>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="modal-field">
+                        <label for="user-email">
+                            <p class="modal-description">Пошта</p>
+                            <div class="input-wrap">
+                                <input type="email" class="modal-input" id="user-email" name="user-email" required>
+                                <svg class="modal-svg-input" width="18" height="18">
+                                    <use href="./images/icons.svg#iconmodalemail"></use>
+                                </svg>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="feedback-field">
+                        <label for="feedback" class="feedback">
+                            <p class="feedback-par">Коментар</p>
+                            <textarea name="feedback" class="modal-feedback" id="feedback"
+                                placeholder="Введіть текст"></textarea>
+                        </label>
+                    </div>
+                    <input class="modal-checkbox-input visually-hidden" name="modal-checkbox" type="checkbox" id="agreement"
+                        required>
+                    <label for="agreement" class="modal-checkbox-label">
+                        <span>
+                            <svg class="modal-svg-check" width="16" height="15">
+                                <use href="./images/icons.svg#iconcheck"></use>
+                            </svg>
+                        </span>
+                        <div class="modal-checkbox-text">Погоджуюся з розсилкою та приймаю⠀ <a class="checkbox-link" href="">
+                                Умови договору</a></div>
+                    </label>
+                    <button type="submit" class="modal-sending-button">Відправити</button>
+                </form>
+            </div>
+        </div>
 <script src="./js/modal.js"></script>
+<script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
